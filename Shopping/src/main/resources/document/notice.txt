@@ -1,0 +1,16 @@
+####
+JAVA JDK 1.8
+APACHE TOMCAT 9.0
+ORACLE DATABASE 11g
+bootstrap-4.3.1
+jquery-1.8.1
+STS 4.3.14
+
+
+####
+DB 계정
+ID : system
+PW : q1w2e3r4t5
+
+####
+mapper 파일명 *-mapper.xml 기준으로 생성
