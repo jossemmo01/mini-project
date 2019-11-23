@@ -1,4 +1,4 @@
-package org.spring.home;
+package com.lab.shopping;
 
 import java.text.DateFormat;
 import java.util.Date;
