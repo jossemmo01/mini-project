@@ -32,9 +32,9 @@ public class HomeController {
 		String userAgent = (String)request.getHeader("User-Agent");
 		System.out.println(userAgent);
 		if(StringParser.isNotEmpty(userAgent)) {
-				if(userAgent.indexOf("Mobile") > -1) {
-					System.out.println("1111");
-					return "redirect:/m";
+			if(userAgent.indexOf("Mobile") > -1) {
+				System.out.println("1111");
+				return "redirect:/m";
 			}
 		}
 		model.addAttribute("userAgent", userAgent);
@@ -46,7 +46,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "home/index.home";
+		return "home/index.pc";
 	}
 	
 	/**
@@ -57,8 +57,8 @@ public class HomeController {
 		String userAgent = (String)request.getHeader("User-Agent");
 		System.out.println(userAgent);
 		if(StringParser.isNotEmpty(userAgent)) {
-				if(userAgent.indexOf("Mobile") < 0) {
-					return "redirect:/";
+			if(userAgent.indexOf("Mobile") < 0) {
+				return "redirect:/";
 			}
 		}
 		

@@ -1,0 +1,4 @@
+@charset "UTF-8";
+div.wrap{text-align:center;}
+div.content{display:inline-block;width:50%;border:1px solid gold;padding:20;}
+div.subj{height:250px;}

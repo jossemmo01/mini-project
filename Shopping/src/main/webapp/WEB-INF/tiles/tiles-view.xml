@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE tiles-definitions PUBLIC 
+	"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions> 
+	<!-- base-definition -->
+	<definition name="base" template="/WEB-INF/tiles/layouts/pc/defaultLayout.jsp">
+		<put-attribute name="cssInc" value="/WEB-INF/tiles/layouts/pc/include-css.jsp" />
+		<put-attribute name="jsInc" value="/WEB-INF/tiles/layouts/pc/include-js.jsp" />
+		<put-attribute name="header" value="/WEB-INF/tiles/layouts/pc/header.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/layouts/pc/footer.jsp" />
+	</definition> 
+	<!-- Home Page -->
+	<definition name="*/*.pc" extends="base">
+		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>
+	
+	<!-- base-definition -->
+	<definition name="base" template="/WEB-INF/tiles/layouts/admin/defaultLayout.jsp">
+		<put-attribute name="cssInc" value="/WEB-INF/tiles/layouts/admin/include-css.jsp" />
+		<put-attribute name="jsInc" value="/WEB-INF/tiles/layouts/admin/include-js.jsp" />
+		<put-attribute name="header" value="/WEB-INF/tiles/layouts/admin/header.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/layouts/admin/footer.jsp" />
+	</definition> 
+	<!-- Home Page -->
+	<definition name="*/*.adm" extends="base">
+		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition> 
+	
+	<!-- base-definition -->
+	<definition name="base" template="/WEB-INF/tiles/layouts/noLayout.jsp">
+		<put-attribute name="content" value="" />
+	</definition> 
+	<!-- Home Page -->
+	<definition name="*/*.noLayout" extends="base">
+		<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition> 
+	
+</tiles-definitions>
+
